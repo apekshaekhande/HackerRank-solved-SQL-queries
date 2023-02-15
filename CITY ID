@@ -40,7 +40,9 @@ SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT='CALIFORNIA';
 # Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. 
 # Then print these values as  space-separated integers.
 
-SELECT MAX(total), COUNT(total) FROM (SELECT salary * months AS total FROM Employee) AS totals WHERE total = (SELECT MAX(salary * months) FROM Employee)
+SELECT MAX(total), COUNT(total) 
+FROM (SELECT salary * months AS total FROM Employee) AS totals
+WHERE total = (SELECT MAX(salary * months) FROM Employee)
 
 
 
