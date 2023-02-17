@@ -43,9 +43,9 @@ SELECT MAX(total), COUNT(total)
 FROM (SELECT salary * months AS total FROM Employee) AS totals
 WHERE total = (SELECT MAX(salary * months) FROM Employee)
 
-# We define an employee's total earnings to be their monthly  worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. 
-# Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. 
-# Then print these values as  space-separated integers.
+/* We define an employee's total earnings to be their monthly  worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. 
+   Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. 
+   Then print these values as  space-separated integers. */
 
 SELECT (months * salary) AS earnings, COUNT(name)
 FROM Employee
